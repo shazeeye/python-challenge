@@ -51,8 +51,8 @@ with open(budget_csv, newline="")as csvfile:
     print(f"Total months:{total_months}")
     print(f"Total:{total_net}")
     print(f"Average Change:{change_net/(total_months-1)}")
-    print(f"Maximum increase and month:{maximum_decrease}")
-    print(f"Maximum decrease and month:{maximum_increase}")
+    print(f"Maximum decrease and month:{maximum_decrease}")
+    print(f"Maximum increase and month:{maximum_increase}")
     
    
    #writing to output file     
@@ -66,7 +66,7 @@ with open(outputfile, "w", newline="")as csvfile:
     writer.writerow([total_net])
     writer.writerow({'Average change in Dollars'})
     writer.writerow([(change_net/(total_months-1))])
-    writer.writerow({'Maximum decrease in profits($) and month'})
-    writer.writerow([maximum_increase])
     writer.writerow({'Maximum increase in profits($) and month'})
+    writer.writerow([maximum_increase])
+    writer.writerow({'Maximum decrease in profits($) and month'})
     writer.writerow([maximum_decrease])
